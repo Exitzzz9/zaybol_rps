@@ -2,8 +2,12 @@ package games;
 import java.util.Scanner;
 
 public class RockPaperScissorsGame {
+
+    //@TODO: If the fields are not declared as private they can be manipulated from outside
     Player player;
     Fist aIFist;
+
+    //@FIXME: An instance of the object cannot be created from outside its package if the constructor is not declared as public
     RockPaperScissorsGame(String playerName, int playerScore) {
         player = new Player(playerName, playerScore);
         aIFist = new Fist();
@@ -17,6 +21,8 @@ public class RockPaperScissorsGame {
         game.setAttempts();
         game.playRPS(scanner);
     }
+
+    //@TODO: you can make this method one line shorter
     public void displayName() {
         System.out.println("Welcome to Rock, Paper and Scissors game! Please input your name: ");
         String name = player.getName();
