@@ -1,11 +1,11 @@
 package games;
+
 import java.util.Scanner;
 
 public class Player {
-
     //@TODO: If the fields are not declared as private they can be manipulated from outside
-    int score;
-   private String name;
+    private int score;
+    private String name;
     //constructor
     public Player(String name, int score) {
         this.name = name;
@@ -20,7 +20,7 @@ public class Player {
         System.exit(0);
     }
     @Override
-    public String toString(){
-       return "Name: " + this.name + ", Score: " + this.score;
+    public String toString() {
+        return "Name: " + this.name + ", Score: " + this.score;
     }
 }
