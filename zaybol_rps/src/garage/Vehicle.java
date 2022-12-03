@@ -1,7 +1,9 @@
 package garage;
+import java.util.Scanner;
 
 public abstract class Vehicle {
-    protected String color, regNo;
+    protected String color;
+    protected static String regNo;
     protected int yearOfManufacturing;
 
     public String getColor() {
@@ -32,6 +34,14 @@ public abstract class Vehicle {
         this.color = color;
         this.regNo = regNo;
         this.yearOfManufacturing = yearOfManufacturing;
+    }
+    public static void getVehicleByRegNo() {
+        Scanner keyboardInput = new Scanner(System.in);
+        System.out.println("Please enter the registration number you are looking for: ");
+        String userInput = keyboardInput.nextLine();
+        if (userInput == regNo)
+            System.out.println("Here is the number" + regNo);
+
     }
 
 }
